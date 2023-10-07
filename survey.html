@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SWE645</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="new.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="/profile.html">HOME</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="alert('No Information Yet');">GMU</a></li>
+          <li><a href="#" onclick="alert('No Information Yet')">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="w3-content w3-padding-large w3-margin-top">
+  <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top">
+    <h3 class="surveytext">George Mason University</h3>
+    <h2 class="surveytext">Survey Form</h2>
+    <hr>
+    <form class="w3-container" action="/ErrorPage.html" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Last Name</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Street Name</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Street Name" required>
+        </div>
+        <div class="w3-section">
+            <label>City</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="City" required>
+        </div>
+        <div class="w3-section">
+            <label>Zip</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Zip" required>
+        </div>
+        <div class="w3-section">
+            <label>Telephone</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Telephone" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+            <label>Date</label>
+            <input type="date" required class="w3-input w3-border" name="trip-start" value="2018-07-22" min="2023-01-01" max="9999-99-99"/>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+        </div>
+        <div class="w3-section">
+            <p>What Do You Like About The Campus?</p>
+                <input type="checkbox" name="fav_campus_loc" value="Students" onclick="onlyOne(this)"/>
+                <label for="Students"> Students</label><br>
+                <input type="checkbox" name="fav_campus_loc" value="Location" onclick="onlyOne(this)"/>
+                <label for="Location"> Location</label><br>
+                <input type="checkbox" name="fav_campus_loc" value="Campus" onclick="onlyOne(this)" checked/>
+                <label for="Campus"> Campus</label><br>
+                <input type="checkbox" name="fav_campus_loc" value="Atmosphere" onclick="onlyOne(this)"/>
+                <label for="Atmosphere"> Atmosphere</label><br>
+                <input type="checkbox" name="fav_campus_loc" value="Dorm Rooms" onclick="onlyOne(this)"/> 
+                <label for="Rooms"> Dorm Rooms</label><br>
+                <input type="checkbox" name="fav_campus_loc" value="Sports" onclick="onlyOne(this)"/>
+                <label for="Sports"> Sports</label><br>
+        <div class="w3-section">
+        <p>Where did you hear about George Mason University :</p>
+        <form>
+            <input type="radio" name="fav_language" value="Friends" checked/>
+            <label for="Friends">Friends</label><br>
+            <input type="radio" name="fav_language" value="Internet"/>
+            <label for="Internet">Internet</label><br>
+            <input type="radio" name="fav_language" value="Television"/>
+            <label for="Television">Television</label><br>
+            <label for="Other">Other: </label><input type="text">
+        </form>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-black">Submit</button><br>
+      <input type="reset" value="Reset"/>
+    </form><br>
+  </div>
+
+</div>
+<script>
+  function OnlyOne(b){
+    var x = document.getElementsByName('fav_campus_loc');
+    var i;
+    for (i = 0; i < x.length; i++) {
+      if(x[i].value != b) x[i].checked = false;
+    }
+  }
+</script>
+</body>
+</html>
